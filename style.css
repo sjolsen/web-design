@@ -1,49 +1,76 @@
+/* Layout */
+
 html {
   min-height: 100vh;
 }
 
 body {
-  /* Placement */
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Appearance */
+}
+
+header, div.main-content, footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h1.title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h2.subtitle {
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+div.main-content {
+  flex-grow: 1;
+  max-width: 50em;
+}
+
+div.body-copy {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+footer {
+  bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* Style */
+
+body {
   font-family: "Liberation Sans", Helvetica, Arial, sans-serif;
   letter-spacing: 0.0175em;
   color: #2c2c2c;
   background-color: #fffcf4;
 }
 
-.invert-color {
+header, footer {
   color: #fffcf4;
   background-color: #2c2c2c;
 }
 
-.content {
-  /* Placement */
-  margin-left: 2em;
-  margin-right: 2em;
-}
-
-header {
-  /* Placement */
-  padding-top: 2em;
-  padding-bottom: 1em;
-  /* Appearance */
-}
-
 h1.title {
-  /* Placement */
-  margin-top: 0;
-  margin-bottom: 0;
-  /* Appearance */
   font-size: 3em;
 }
 
 hr.title {
-  margin-top: 1em;
-  margin-bottom: 1em;
   border-style: solid;
   border-color: #fffcf4;
   border-width: 0.5px;
@@ -57,24 +84,7 @@ h2.section {
   font-size: 1.75em;
 }
 
-.body-copy {
-  max-width: 50em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.fill {
-  flex-grow: 1;
-}
-
 p {
   line-height: 1.45;
   color: black;
-}
-
-footer {
-  bottom: 0;
-  width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
