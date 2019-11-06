@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   /* Appearance */
-  font-family: "Liberation Sans";
+  font-family: "Liberation Sans", Helvetica, Arial, sans-serif;
   letter-spacing: 0.0175em;
   color: #2c2c2c;
   background-color: #fffcf4;
