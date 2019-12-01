@@ -5,7 +5,7 @@
     xmlns:blog="http://sj-olsen.com/blog"
     xmlns="http://www.w3.org/1999/xhtml">
   <xsl:output
-      method="xml"
+      method="html"
       encoding="UTF-8"
       doctype-system="about:legacy-compat"
       indent="yes"/>
@@ -35,22 +35,30 @@
 
   <xsl:template match="blog:section">
     <h2 class="section"><xsl:value-of select="blog:title"/></h2>
-    <xsl:apply-templates/>
+    <xsl:apply-templates select="blog:body"/>
   </xsl:template>
 
   <xsl:template match="blog:code-block">
     <div class="code">
-      <div class="code-header">
-        <xsl:apply-templates/>
-      </div>
+      <xsl:if test="blog:header">
+        <div class="code-header">
+          <xsl:apply-templates select="blog:header"/>
+        </div>
+      </xsl:if>
       <div class="code-body">
-        <pre>CODE</pre>
+        <pre><xsl:apply-templates select="blog:body"/></pre>
       </div>
     </div>
   </xsl:template>
 
   <xsl:template match="blog:code">
-    <span class="code">EXAMPLE</span>
+    <span class="code"><xsl:apply-templates/></span>
+  </xsl:template>
+
+  <xsl:template match="*[namespace-uri()='http://www.w3.org/1999/xhtml']">
+    <xsl:element name="{local-name()}">
+      <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
 
 </xsl:stylesheet>
