@@ -19,16 +19,22 @@
       </head>
       <body>
         <header>
-          <h1 class="title"><xsl:value-of select="blog:title"/></h1>
-          <hr class="title" />
-          <h2 class="subtitle"><xsl:value-of select="blog:subtitle"/></h2>
+          <div class="hcenter">
+            <h1 class="title"><xsl:value-of select="blog:title"/></h1>
+            <hr class="title" />
+            <h2 class="subtitle"><xsl:value-of select="blog:subtitle"/></h2>
+          </div>
         </header>
         <div class="main-content">
-          <div class="body-copy">
-            <xsl:apply-templates select="blog:section"/>
+          <div class="hcenter">
+            <div class="body-copy">
+              <xsl:apply-templates select="blog:section"/>
+            </div>
           </div>
         </div>
-        <footer><xsl:value-of select="blog:copyright"/></footer>
+        <footer>
+          <div class="hcenter"><xsl:value-of select="blog:copyright"/></div>
+        </footer>
       </body>
     </html>
   </xsl:template>
