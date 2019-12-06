@@ -19,6 +19,12 @@ header, div.main-content, footer {
   padding-right: 2rem;
 }
 
+div.hcenter {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55rem;
+}
+
 header {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -41,7 +47,6 @@ h2.subtitle {
 
 div.main-content {
   flex-grow: 1;
-  max-width: 50em;
 }
 
 div.body-copy {

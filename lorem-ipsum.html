@@ -7,136 +7,142 @@
   </head>
   <body>
     <header>
-      <h1 class="title">Lorem Ipsum</h1>
-      <hr class="title" />
-      <h2 class="subtitle">désign en noir et crème</h2>
+      <div class="hcenter">
+        <h1 class="title">Lorem Ipsum</h1>
+        <hr class="title" />
+        <h2 class="subtitle">désign en noir et crème</h2>
+      </div>
     </header>
     <div class="main-content">
-      <div class="body-copy">
+      <div class="hcenter">
+        <div class="body-copy">
 
-        <h2 class="section">Adipiscing Elit</h2>
+          <h2 class="section">Adipiscing Elit</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
-          varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus
-          magna felis sollicitudin mauris. Integer in mauris eu nibh euismod
-          gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis
-          risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue,
-          eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas
-          fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla
-          a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis,
-          neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing
-          sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque
-          nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus
-          quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis,
-          molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
+          <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
+            varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus
+            magna felis sollicitudin mauris. Integer in mauris eu nibh euismod
+            gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis
+            risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue,
+            eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas
+            fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla
+            a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis,
+            neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing
+            sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque
+            nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus
+            quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis,
+            molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
 
-        <h2 class="section">C Programs</h2>
+          <h2 class="section">C Programs</h2>
 
-        <p>Code is often rendered on web pages in floating blocks. These blocks
-          sometimes have a small header identifying the listing; other times,
-          this is omitted. The code will often be displayed with syntax
-          highlighting and/or special font styles and weights for elements like
-          keywords. However, this is usually done with client-side Javascript or
-          server-side rendering as it is not practical to embed this styling by
-          hand. Consider the following simple C program:</p>
+          <p>Code is often rendered on web pages in floating blocks. These blocks
+            sometimes have a small header identifying the listing; other times,
+            this is omitted. The code will often be displayed with syntax
+            highlighting and/or special font styles and weights for elements like
+            keywords. However, this is usually done with client-side Javascript or
+            server-side rendering as it is not practical to embed this styling by
+            hand. Consider the following simple C program:</p>
 
-        <div class="code">
-          <div class="code-header">Fibonacci example (<span class="code">fib.c</span>)</div>
-          <div class="code-body">
-            <pre>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+          <div class="code">
+            <div class="code-header">Fibonacci example (<span class="code">fib.c</span>)</div>
+            <div class="code-body">
+              <pre>#include &lt;stdio.h&gt;
+  #include &lt;stdlib.h&gt;
 
-int main(int argc, char** argv) {
-  int a = 1, b = 1;
-  for (int i = 0; i &lt; 10; ++i) {
-    printf("%d ", a);
-    b = b + a;
-    a = b - a;
-  }
-  printf("\n");
-  return EXIT_SUCCESS;
-}</pre>
-         </div>
+  int main(int argc, char** argv) {
+    int a = 1, b = 1;
+    for (int i = 0; i &lt; 10; ++i) {
+      printf("%d ", a);
+      b = b + a;
+      a = b - a;
+    }
+    printf("\n");
+    return EXIT_SUCCESS;
+  }</pre>
+           </div>
+          </div>
+
+          <p>When run, this program prints the first ten Fibonacci numbers:</p>
+
+          <div class="code">
+            <div class="code-body">
+              <pre>$ cc fib.c
+  $ ./a.out
+  1 1 2 3 5 8 13 21 34 55</pre>
+           </div>
+          </div>
+
+          <p>When compiled for 64-bit x86 with optimizations turned on, GCC
+            produces something like the following:</p>
+
+          <div class="code">
+            <div class="code-header"><span class="code">a.out</span> (partial disassembly)</div>
+            <div class="code-body">
+              <pre>0000000000001060 &lt;main&gt;:
+      1060:       41 55                   push   %r13
+      1062:       4c 8d 2d 9b 0f 00 00    lea    0xf9b(%rip),%r13        # 2004 &lt;_IO_stdin_used+0x4&gt;
+      1069:       41 54                   push   %r12
+      106b:       41 bc 0a 00 00 00       mov    $0xa,%r12d
+      1071:       55                      push   %rbp
+      1072:       bd 01 00 00 00          mov    $0x1,%ebp
+      1077:       53                      push   %rbx
+      1078:       bb 01 00 00 00          mov    $0x1,%ebx
+      107d:       48 83 ec 08             sub    $0x8,%rsp
+      1081:       0f 1f 80 00 00 00 00    nopl   0x0(%rax)
+      1088:       89 de                   mov    %ebx,%esi
+      108a:       4c 89 ef                mov    %r13,%rdi
+      108d:       31 c0                   xor    %eax,%eax
+      108f:       e8 ac ff ff ff          callq  1040 &lt;printf@plt&gt;
+      1094:       8d 04 2b                lea    (%rbx,%rbp,1),%eax
+      1097:       89 eb                   mov    %ebp,%ebx
+      1099:       89 c5                   mov    %eax,%ebp
+      109b:       41 83 ec 01             sub    $0x1,%r12d
+      109f:       75 e7                   jne    1088 &lt;main+0x28&gt;
+      10a1:       bf 0a 00 00 00          mov    $0xa,%edi
+      10a6:       e8 85 ff ff ff          callq  1030 &lt;putchar@plt&gt;
+      10ab:       48 83 c4 08             add    $0x8,%rsp
+      10af:       31 c0                   xor    %eax,%eax
+      10b1:       5b                      pop    %rbx
+      10b2:       5d                      pop    %rbp
+      10b3:       41 5c                   pop    %r12
+      10b5:       41 5d                   pop    %r13
+      10b7:       c3                      retq
+      10b8:       0f 1f 84 00 00 00 00    nopl   0x0(%rax,%rax,1)
+      10bf:       00</pre>
+           </div>
+          </div>
+
+         <h2 class="section">Li Europan Lingues</h2>
+
+          <p>Li Europan lingues es membres del sam familie. Lor separat existentie
+            es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
+            vocabular. Li lingues differe solmen in li grammatica, li
+            pronunciation e li plu commun vocabules. Omnicos directe al
+            desirabilite de un nov lingua franca: On refusa continuar payar
+            custosi traductores.</p>
+
+          <p>At solmen va esser necessi far uniform grammatica, pronunciation e
+            plu commun paroles. Ma quande lingues coalesce, li grammatica del
+            resultant lingue es plu simplic e regulari quam ti del coalescent
+            lingues. Li nov lingua franca va esser plu simplic e regulari quam li
+            existent Europan lingues. It va esser tam simplic quam Occidental in
+            fact, it va esser Occidental. A un Angleso it va semblar un
+            simplificat Angles, quam un skeptic Cambridge amico dit me que
+            Occidental es.</p>
+
         </div>
-
-        <p>When run, this program prints the first ten Fibonacci numbers:</p>
-
-        <div class="code">
-          <div class="code-body">
-            <pre>$ cc fib.c
-$ ./a.out
-1 1 2 3 5 8 13 21 34 55</pre>
-         </div>
-        </div>
-
-        <p>When compiled for 64-bit x86 with optimizations turned on, GCC
-          produces something like the following:</p>
-
-        <div class="code">
-          <div class="code-header"><span class="code">a.out</span> (partial disassembly)</div>
-          <div class="code-body">
-            <pre>0000000000001060 &lt;main&gt;:
-    1060:       41 55                   push   %r13
-    1062:       4c 8d 2d 9b 0f 00 00    lea    0xf9b(%rip),%r13        # 2004 &lt;_IO_stdin_used+0x4&gt;
-    1069:       41 54                   push   %r12
-    106b:       41 bc 0a 00 00 00       mov    $0xa,%r12d
-    1071:       55                      push   %rbp
-    1072:       bd 01 00 00 00          mov    $0x1,%ebp
-    1077:       53                      push   %rbx
-    1078:       bb 01 00 00 00          mov    $0x1,%ebx
-    107d:       48 83 ec 08             sub    $0x8,%rsp
-    1081:       0f 1f 80 00 00 00 00    nopl   0x0(%rax)
-    1088:       89 de                   mov    %ebx,%esi
-    108a:       4c 89 ef                mov    %r13,%rdi
-    108d:       31 c0                   xor    %eax,%eax
-    108f:       e8 ac ff ff ff          callq  1040 &lt;printf@plt&gt;
-    1094:       8d 04 2b                lea    (%rbx,%rbp,1),%eax
-    1097:       89 eb                   mov    %ebp,%ebx
-    1099:       89 c5                   mov    %eax,%ebp
-    109b:       41 83 ec 01             sub    $0x1,%r12d
-    109f:       75 e7                   jne    1088 &lt;main+0x28&gt;
-    10a1:       bf 0a 00 00 00          mov    $0xa,%edi
-    10a6:       e8 85 ff ff ff          callq  1030 &lt;putchar@plt&gt;
-    10ab:       48 83 c4 08             add    $0x8,%rsp
-    10af:       31 c0                   xor    %eax,%eax
-    10b1:       5b                      pop    %rbx
-    10b2:       5d                      pop    %rbp
-    10b3:       41 5c                   pop    %r12
-    10b5:       41 5d                   pop    %r13
-    10b7:       c3                      retq
-    10b8:       0f 1f 84 00 00 00 00    nopl   0x0(%rax,%rax,1)
-    10bf:       00</pre>
-         </div>
-        </div>
-
-       <h2 class="section">Li Europan Lingues</h2>
-
-        <p>Li Europan lingues es membres del sam familie. Lor separat existentie
-          es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-          vocabular. Li lingues differe solmen in li grammatica, li
-          pronunciation e li plu commun vocabules. Omnicos directe al
-          desirabilite de un nov lingua franca: On refusa continuar payar
-          custosi traductores.</p>
-
-        <p>At solmen va esser necessi far uniform grammatica, pronunciation e
-          plu commun paroles. Ma quande lingues coalesce, li grammatica del
-          resultant lingue es plu simplic e regulari quam ti del coalescent
-          lingues. Li nov lingua franca va esser plu simplic e regulari quam li
-          existent Europan lingues. It va esser tam simplic quam Occidental in
-          fact, it va esser Occidental. A un Angleso it va semblar un
-          simplificat Angles, quam un skeptic Cambridge amico dit me que
-          Occidental es.</p>
-
       </div>
     </div>
-    <footer>Copyright © 2019 Stuart Olsen</footer>
+    <footer>
+      <div class="hcenter">Copyright © 2019 Stuart Olsen</div>
+    </footer>
   </body>
 </html>
