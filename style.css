@@ -55,7 +55,8 @@ div.body-copy {
 }
 
 div.code {
-  margin: 2rem 2rem 2rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 div.code-header {
@@ -118,6 +119,7 @@ h2.section {
 
 p {
   line-height: 1.45;
+  text-align: justify;
   color: black;
 }
 
