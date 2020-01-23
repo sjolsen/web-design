@@ -7,5 +7,5 @@ clean:
 test: output.html lorem-ipsum.html
 	diff $^ | less
 
-output.html: render.py lorem-ipsum.xml
+output.html: render.py renderer/*.py lorem-ipsum.xml
 	python3 render.py lorem-ipsum.xml > $@
