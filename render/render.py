@@ -2,7 +2,7 @@ import html
 import sys
 from xml.etree import ElementTree as ET
 
-from renderer import parser
+from web_design.render import parser
 
 def make_html_node(name, attrs, contents):
   parts = [name]

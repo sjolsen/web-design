@@ -1,1 +1,2 @@
-output.html
+bazel-*
+__pycache__

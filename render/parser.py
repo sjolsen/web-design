@@ -2,7 +2,7 @@ import sys
 import typing
 from xml.etree import ElementTree as ET
 
-from renderer import document
+from web_design.render import document
 
 
 def text_and_children(node):
