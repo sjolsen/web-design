@@ -1,12 +1,8 @@
 from typing import *
 
 
-class Content(object):
-  pass
-
-
 class MixedContent(NamedTuple):
-  parts: List[Union[Text, Content]]
+  parts: List[Union[Text, 'HTMLNode', 'Code', 'CodeBlock']]
 
 
 class Document(NamedTuple):
@@ -20,12 +16,16 @@ class Document(NamedTuple):
     body: MixedContent
 
 
-class HTMLNode(NamedTuple, Content):
+class HTMLNode(NamedTuple):
   tag: Text
   attrs: Dict[Text, Text]
   content: MixedContent
 
 
-class CodeBlock(NamedTuple, Content):
-  header: MixedContent
+class Code(NamedTuple):
+  content: MixedContent
+
+
+class CodeBlock(NamedTuple):
+  header: Optional[MixedContent]
   body: MixedContent
