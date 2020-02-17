@@ -1,3 +1,5 @@
+load("@pip_deps//:requirements.bzl", "requirement")
+
 py_library(
   name = "document",
   srcs = ["document.py"],
@@ -12,6 +14,9 @@ py_library(
 py_binary(
   name = "render",
   srcs = ["render.py"],
-  deps = [":parser"],
+  deps = [
+      ":parser",
+      requirement("more_itertools"),
+  ],
   visibility = ["//visibility:public"],
 )
