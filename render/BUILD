@@ -1,4 +1,5 @@
 load("@pip_deps//:requirements.bzl", "requirement")
+load("//server:server.bzl", "simple_resource")
 
 py_library(
   name = "document",
@@ -19,4 +20,11 @@ py_binary(
       requirement("more_itertools"),
   ],
   visibility = ["//visibility:public"],
+)
+
+simple_resource(
+    name = "style",
+    src = "style.css",
+    path = "style.css",
+    visibility = ["//visibility:public"],
 )

@@ -1,20 +1,17 @@
-genrule(
-  name = "example",
-  srcs = [
-      "fib.c",
-      "fib.dis",
-      "lorem-ipsum.xml",
-  ],
-  outs = ["example.html"],
-  tools = ["//render"],
-  cmd = "$(location //render) $(location :lorem-ipsum.xml) > $@",
+load("//render:render.bzl", "blog_document")
+load("//server:server.bzl", "simple_server")
+
+blog_document(
+    name = "example",
+    main = "example.xml",
+    srcs = [
+        "example.xml",
+        "fib.c",
+        "fib.dis",
+    ],
 )
 
-py_binary(
+simple_server(
     name = "server",
-    srcs = ["server.py"],
-    data = [
-        ":example",
-        "//:style.css",
-    ],
+    data = ":example",
 )
