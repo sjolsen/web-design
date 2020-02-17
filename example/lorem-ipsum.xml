@@ -53,7 +53,7 @@
 
       <code-block>
         <header>Fibonacci example (<code>fib.c</code>)</header>
-        <body><xi:include href="fib.c" parse="text" /></body>
+        <body><xi:include href="example/fib.c" parse="text" /></body>
       </code-block>
 
       <html:p>
@@ -73,7 +73,7 @@ $ ./a.out
 
       <code-block>
         <header><code>a.out</code> (partial disassembly)</header>
-        <body><xi:include href="fib.dis" parse="text" /></body>
+        <body><xi:include href="example/fib.dis" parse="text" /></body>
       </code-block>
     </body>
   </section>
