@@ -1,7 +1,11 @@
 genrule(
   name = "output",
-  srcs = ["lorem-ipsum.xml"],
+  srcs = [
+      "fib.c",
+      "fib.dis",
+      "lorem-ipsum.xml",
+  ],
   outs = ["output.html"],
   tools = ["//render"],
-  cmd = "$(location //render) $(SRCS) > $@",
+  cmd = "$(location //render) $(location :lorem-ipsum.xml) > $@",
 )

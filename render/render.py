@@ -2,6 +2,7 @@ import functools
 import html
 import sys
 import typing
+from xml.etree import ElementInclude
 from xml.etree import ElementTree as ET
 
 from web_design.render import document
@@ -108,6 +109,7 @@ def main(argv):
   [_, input_filename] = argv
   tree = ET.parse(input_filename)
   root = tree.getroot()
+  ElementInclude.include(root)
   doc = parser.ParseDocument(root)
   print(RenderDocument(doc))
 
