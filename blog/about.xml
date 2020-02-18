@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="blog.xsl"?>
+<document xmlns="http://sj-olsen.com/blog"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Stuart Olsen</title>
+  <subtitle>senior software engineer</subtitle>
+  <copyright>Copyright © 2020 Stuart Olsen</copyright>
+
+  <section>
+    <title>About me</title>
+    <body>
+      <html:p>
+        I'm a graduate of Texas State University and a current senior software
+        engineer at Google (any views expressed here are my own, etc. etc.). My
+        professional experience is primarily in firmware development and
+        testing, hardware bring-up, system design, and custom software
+        development infrastructure. I have varying levels of experience in
+        several fields, some closely related to my professional work and some
+        less so, including electrical engineering, computer architecture,
+        programming language theory, category theory, control theory, operating
+        systems, and FPGA development.
+      </html:p>
+      <html:p>
+        My hobbies include cross-stitch, music (mainly clarinet), and rarely,
+        programming. Some of my old work is hosted on my GitHub page (<html:a
+        href="https://github.com/sjolsen">https://github.com/sjolsen</html:a>),
+        but little if any of it is likely to be of practical use.
+      </html:p>
+      <html:p>
+        I may start a blog here if I ever get around to learning web development
+        beyond the static hand-written HTML and CSS you see here.
+      </html:p>
+    </body>
+  </section>
+
+  <section>
+    <title>Contact</title>
+    <body>
+      <html:p>
+        I can be reached at <html:a
+        href="mailto:stuart@sj-olsen.com">stuart@sj-olsen.com</html:a>. I check
+        this inbox relatively infrequently, so it may be a while before I get
+        back to you. <html:b>No job solicitations, please</html:b>. Messages
+        relevant to my work at Google should be directed to my corporate e-mail
+        address.
+      </html:p>
+    </body>
+  </section>
+</document>

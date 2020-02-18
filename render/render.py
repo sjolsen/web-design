@@ -72,7 +72,7 @@ def RenderDocumentSection(section):
 @Render.register(document.HTMLNode)
 def RenderHTMLNode(node):
   parts = [node.tag]
-  for key, value in node.attrs:
+  for key, value in node.attrs.items():
     parts.append(f'{key}="{html.escape(value)}"')
   opentag = ' '.join(parts)
   content = Render(node.content)
