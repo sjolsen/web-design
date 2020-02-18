@@ -32,7 +32,10 @@ blog_document = rule(
         ),
         "_default_deps": attr.label_list(
             providers = [ResourceInfo],
-            default = ["//render:style"],
+            default = [
+                "//render:bullet",
+                "//render:style",
+            ],
         ),
         "_render": attr.label(
             executable = True,

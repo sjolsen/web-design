@@ -36,7 +36,7 @@ div.header-flexbox {
 }
 
 div.header-flexbox .title-block {
-  flex-grow: 0.75;
+  flex-grow: 0.8;
 }
 
 div.header-flexbox .header-vr {
@@ -45,7 +45,7 @@ div.header-flexbox .header-vr {
 }
 
 div.header-flexbox .nav-block {
-  flex-grow: 0.25;
+  flex-grow: 0.2;
 }
 
 h1.title {
@@ -68,12 +68,27 @@ ul.nav-block {
   flex-direction: column;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
-ul.nav-block div.nav-row {
+.nav-spacer {
+  flew-grow: 0;
+  height: 0.5rem;
+}
+
+.nav-row {
   flex-grow: 1;
   display: flex;
   align-items: center;
+}
+
+.nav-icon {
+  padding-right: 0.8rem;
+  height: 2.2rem;
+}
+
+.nav-row li {
+  list-style-type: none;
 }
 
 div.main-content {
@@ -149,7 +164,16 @@ h2.section {
 }
 
 .nav-block {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+}
+
+a.nav-row {
+  color: #fffcf4;
+  text-decoration: none;
+}
+
+a.nav-row:hover {
+  text-decoration: underline;
 }
 
 p {
