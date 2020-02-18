@@ -39,10 +39,18 @@ def RenderDocument(doc):
   </head>
   <body>
     <header>
-      <div class="hcenter">
-        <h1 class="title">{title}</h1>
-        <hr class="title" />
-        <h2 class="subtitle">{subtitle}</h2>
+      <div class="hcenter header-flexbox">
+        <div class="title-block">
+          <h1 class="title">{title}</h1>
+          <hr class="title-rule" />
+          <h2 class="subtitle">{subtitle}</h2>
+        </div>
+        <div class="header-vr title-rule"></div>
+        <ul class="nav-block">
+          <div class="nav-row"><li>Home</li></div>
+          <div class="nav-row"><li>Document index</li></div>
+          <div class="nav-row"><li>Contact</li></div>
+        </ul>
       </div>
     </header>
     <div class="main-content">
