@@ -46,22 +46,24 @@ def RenderDocument(doc):
           <h2 class="subtitle">{subtitle}</h2>
         </div>
         <div class="header-vr title-rule"></div>
-        <ul class="nav-block">
-          <a class="nav-row" href="#">
-            <img class="nav-icon" src="x.svg"></img>
-            <li>Home</li>
-          </a>
-          <div class="nav-spacer"></div>
-          <a class="nav-row" href="#">
-            <img class="nav-icon" src="x.svg"></img>
-            <li>Document index</li>
-          </a>
-          <div class="nav-spacer"></div>
-          <a class="nav-row" href="#">
-            <img class="nav-icon" src="x.svg"></img>
-            <li>Contact</li>
-          </a>
-        </ul>
+        <nav>
+          <ul>
+            <a class="nav-row" href="#">
+              <img class="nav-icon" src="x.svg"></img>
+              <li>Home</li>
+            </a>
+            <div class="nav-spacer"></div>
+            <a class="nav-row" href="#">
+              <img class="nav-icon" src="x.svg"></img>
+              <li>Document index</li>
+            </a>
+            <div class="nav-spacer"></div>
+            <a class="nav-row" href="#">
+              <img class="nav-icon" src="x.svg"></img>
+              <li>Contact</li>
+            </a>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="main-content">

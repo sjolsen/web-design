@@ -44,8 +44,9 @@ div.header-flexbox .header-vr {
   margin-right: 1rem;
 }
 
-div.header-flexbox .nav-block {
+div.header-flexbox nav {
   flex-grow: 0.2;
+  display: flex;
 }
 
 h1.title {
@@ -63,7 +64,7 @@ h2.subtitle {
   margin-bottom: 0.25rem;
 }
 
-ul.nav-block {
+nav ul {
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -163,7 +164,7 @@ h2.section {
   font-size: 1.75rem;
 }
 
-.nav-block {
+nav {
   font-size: 1.75rem;
 }
 
