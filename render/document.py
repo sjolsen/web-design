@@ -2,7 +2,7 @@ from typing import *
 
 
 class MixedContent(NamedTuple):
-  parts: List[Union[Text, 'HTMLNode', 'Code', 'CodeBlock']]
+  parts: List[Union[Text, 'MixedContent', 'HTMLNode', 'Code', 'CodeBlock']]
 
 
 class Document(NamedTuple):
