@@ -28,3 +28,10 @@ simple_resource(
     path = "style.css",
     visibility = ["//visibility:public"],
 )
+
+simple_resource(
+    name = "bullet",
+    src = "x.svg",
+    path = "x.svg",
+    visibility = ["//visibility:public"],
+)
