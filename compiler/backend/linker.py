@@ -19,7 +19,7 @@ class Resource(abc.ABC):
     pass
 
 
-def StaticResource(Resource):
+class StaticResource(Resource):
 
   def __init__(self, path: str):
     super().__init__()
@@ -32,7 +32,7 @@ def StaticResource(Resource):
     shutil.copyfile(self.path, path)
 
 
-def LinkResource(Resource):
+class LinkResource(Resource):
 
   def __init__(self, ref: Reference):
     super().__init__()
@@ -46,21 +46,21 @@ def LinkResource(Resource):
     os.symlink(real, path)
 
 
-LinkerStrategy = Callable[[Reference, Resource], str]
-
-
 class Linker(object):
 
-  def __init__(self, strategy: LinkerStrategy):
+  def __init__(self):
     super().__init__()
-    self._strategy = strategy
     self._resources: Dict[Reference, Resource] = dict()
     self._link_map: Dict[Reference, str] = dict()
     self._reverse_link_map: Dict[str, Reference] = dict()
 
-  def add_resource(self, ref: Reference, resource: Resource):
+  def add_resource(self, ref: Reference, out: str, resource: Resource):
     assert ref not in self._resources
+    assert ref not in self._link_map
+    assert out not in self._reverse_link_map
     self._resources[ref] = resource
+    self._link_map[ref] = out
+    self._reverse_link_map[out] = ref
 
   def resolve(self, ref: Reference) -> str:
     return self._link_map[ref]
@@ -71,11 +71,7 @@ class Linker(object):
       new_frontier: Set[Reference] = set()
       for ref in frontier:
         res = self._resources[ref]
-        resolved = self._strategy(ref, res)
-        assert resolved not in self._reverse_link_map
-        self._link_map[ref] = resolved
-        self._reverse_link_map[resolved] = ref
-        new_frontier |= set(res.get_references)
+        new_frontier |= set(res.get_references())
       frontier = new_frontier - set(self._link_map.keys())
     for ref, relpath in self._link_map:
       abspath = os.path.join(fs_root, relpath)

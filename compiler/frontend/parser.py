@@ -5,7 +5,7 @@ from xml.etree import ElementTree as ET
 
 import more_itertools
 
-from web_design.render import document
+from web_design.compiler.frontend import document
 
 
 def MapOptional(f, x):
@@ -206,7 +206,7 @@ def ParseDocumentSection(node):
   with ParseContext(node) as i:
     title = i.Expect(Node(BlogTag('title')))
     body = i.Expect(Node(BlogTag('body')))
-  return document.Document.Section(
+  return document.Section(
     title=ParseMixedContent(title),
     body=ParseMixedContent(body))
 
