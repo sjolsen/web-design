@@ -1,19 +1,20 @@
-from typing import *
+from typing import Dict, List, NamedTuple, Optional, Text, Union
 
 
 class MixedContent(NamedTuple):
-  parts: List[Union[Text, 'HTMLNode', 'Code', 'CodeBlock']]
+  parts: List[Union[Text, 'MixedContent', 'HTMLNode', 'Code', 'CodeBlock']]
 
 
 class Document(NamedTuple):
   title: MixedContent
   subtitle: MixedContent
   copyright: MixedContent
-  sections: List['Document.Section']
+  sections: List['Section']
 
-  class Section(NamedTuple):
-    title: MixedContent
-    body: MixedContent
+
+class Section(NamedTuple):
+  title: MixedContent
+  body: MixedContent
 
 
 class HTMLNode(NamedTuple):

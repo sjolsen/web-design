@@ -1,7 +1,7 @@
-load("//render:render.bzl", "blog_document")
+load("//compiler:compiler.bzl", "document", "site")
 load("//server:server.bzl", "simple_server")
 
-blog_document(
+document(
     name = "example",
     main = "example.xml",
     srcs = [
@@ -11,7 +11,19 @@ blog_document(
     ],
 )
 
+site(
+    name = "example_site",
+    srcs = [
+        ":example",
+        # TODO: Make this implicit
+        "//compiler/backend/swiss:nav_buttons",
+        "//compiler/backend/swiss:style",
+    ],
+    index = ":example",
+    output_root = "example",
+)
+
 simple_server(
     name = "server",
-    data = ":example",
+    site = ":example_site",
 )
