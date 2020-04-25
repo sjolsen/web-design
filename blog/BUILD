@@ -12,7 +12,12 @@ document(
 
 site(
     name = "blog",
-    srcs = [":about"],
+    srcs = [
+        ":about",
+        # TODO: Make this implicit
+        "//compiler/backend/swiss:nav_buttons",
+        "//compiler/backend/swiss:style",
+    ],
     index = ":about",
     output_root = "blog",
 )
