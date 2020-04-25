@@ -1,13 +1,23 @@
-load("//render:render.bzl", "blog_document")
-load("//server:server.bzl", "simple_server")
+load(
+    "//compiler:compiler.bzl",
+    "document",
+    "site",
+)
+# load("//server:server.bzl", "simple_server")
 
-blog_document(
+document(
     name = "about",
-    main = "about.xml",
-    srcs = ["about.xml"],
+    src = "about.xml",
 )
 
-simple_server(
-    name = "server",
-    data = ":about",
+site(
+    name = "blog",
+    srcs = [":about"],
+    index = ":about",
+    output_root = "blog",
 )
+
+# simple_server(
+#     name = "server",
+#     data = ":about",
+# )
