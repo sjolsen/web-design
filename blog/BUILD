@@ -7,7 +7,7 @@ load("//server:server.bzl", "simple_server")
 
 document(
     name = "about",
-    src = "about.xml",
+    main = "about.xml",
 )
 
 site(
