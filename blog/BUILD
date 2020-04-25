@@ -3,7 +3,7 @@ load(
     "document",
     "site",
 )
-# load("//server:server.bzl", "simple_server")
+load("//server:server.bzl", "simple_server")
 
 document(
     name = "about",
@@ -22,7 +22,7 @@ site(
     output_root = "blog",
 )
 
-# simple_server(
-#     name = "server",
-#     data = ":about",
-# )
+simple_server(
+    name = "server",
+    site = ":blog",
+)

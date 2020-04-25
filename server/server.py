@@ -1,23 +1,17 @@
-import ast
 from http import server
-import os
-import sys
+import subprocess
 import tempfile
+
+from absl import app
 
 
 PORT = 8000
 
 
 def main(argv):
-  [_, resources_file] = argv
-  with open(resources_file, 'rt') as f:
-    resources = ast.literal_eval(f.read())
+  [_, tarball] = argv
   with tempfile.TemporaryDirectory() as d:
-    for link, origin in resources.items():
-      src = os.path.abspath(origin)
-      dst = os.path.join(d, link)
-      os.makedirs(os.path.dirname(dst), exist_ok=True)
-      os.symlink(src, dst)
+    subprocess.check_call(['tar', '-xzf', tarball, '-C', d])
     def handler(*args, **kwargs):
       return server.SimpleHTTPRequestHandler(*args, directory=d, **kwargs)
     with server.HTTPServer(('', PORT), handler) as httpd:
@@ -25,5 +19,4 @@ def main(argv):
 
 
 if __name__ == '__main__':
-  rv = main(sys.argv)
-  sys.exit(rv or 0)
+  app.run(main)
