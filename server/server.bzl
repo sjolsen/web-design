@@ -1,4 +1,4 @@
-load("//compiler:compiler.bzl", "SiteInfo")
+load("@web_compiler//:compiler.bzl", "SiteInfo")
 
 _STUB_TEMPLATE = """#!/bin/sh
 

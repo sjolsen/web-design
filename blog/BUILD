@@ -1,9 +1,5 @@
-load(
-    "//compiler:compiler.bzl",
-    "document",
-    "site",
-)
 load("//server:server.bzl", "simple_server")
+load("@web_compiler//:compiler.bzl", "document", "site")
 
 document(
     name = "about",
@@ -15,9 +11,10 @@ site(
     srcs = [
         ":about",
         # TODO: Make this implicit
-        "//compiler/backend/swiss:nav_buttons",
-        "//compiler/backend/swiss:style",
+        "@web_compiler//backend/swiss:nav_buttons",
+        "@web_compiler//backend/swiss:style",
     ],
+    build_info = "//bazel:build_info",
     index = ":about",
     output_root = "blog",
 )
