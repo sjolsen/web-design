@@ -4,8 +4,8 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 git_repository(
     name = "web_compiler",
     remote = "git@github.com:sjolsen/web_compiler.git",
-    commit = "b5b71b8fcd3235aa1494ec16f3c900d7b97e22b2",
-    shallow_since = "1587867179 -0700",
+    commit = "3f33658497bee589de06d2fc8e744ee29cdd8da4",
+    shallow_since = "1587868113 -0700",
 )
 
 # Path manipulation
