@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://sj-olsen.com/blog"
+          xmlns:html="http://www.w3.org/1999/xhtml">
+  <title>Home</title>
+  <subtitle>Stuart Olsen's blog</subtitle>
+  <copyright>Stuart Olsen</copyright>
+
+  <section>
+    <title>Under construction</title>
+    <body>
+      <html:p>
+        I've finally gotten around to cobbling together a templating engine for a blog.
+        Right now there are still some major pieces missing, including a document index, a real home page, and most importantly something worth reading.
+        Lately I've been working on a variety of FPGA demos built on top of <html:a href="https://github.com/nmigen/nmigen">nMigen</html:a>.
+        This work is publicly available in my <html:a href="https://github.com/sjolsen/nmigen-nexys">nmigen-nexys repository</html:a>.
+        Once I get the rest of the backend for this site working, I'll probably write some articles about my experience with this.
+      </html:p>
+    </body>
+  </section>
+</document>
