@@ -16,6 +16,7 @@ site(
     ],
     build_info = "//bazel:build_info",
     index = ":about",
+    nav = "nav.xml",
     output_root = "blog",
 )
 
