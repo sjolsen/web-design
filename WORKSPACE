@@ -3,9 +3,9 @@ workspace(name = "web_design")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 git_repository(
     name = "web_compiler",
-    remote = "git@github.com:sjolsen/web_compiler.git",
-    commit = "95eae7175c0572fd19c2a9d197a6d92ac93be12f",
-    shallow_since = "1587876349 -0700",
+    remote = "https://github.com/sjolsen/web_compiler.git",
+    commit = "1502749d419af5bd766c0b085afe43ee93a3c18a",
+    shallow_since = "1588480106 -0700",
 )
 # local_repository(name = "web_compiler", path = "../web_compiler")
 
@@ -25,18 +25,19 @@ bazel_skylib_workspace()
 # Python setup
 http_archive(
     name = "rules_python",
-    url = "https://github.com/bazelbuild/rules_python/releases/download/0.0.1/rules_python-0.0.1.tar.gz",
-    sha256 = "aa96a691d3a8177f3215b14b0edc9641787abaaa30363a080165d06ab65e1161",
+    sha256 = "98c9b903f6e8fe20b7e56d19c4822c8c49a11b475bd4ec0ca6a564e8bc5d5fa2",
+    url = "https://github.com/bazelbuild/rules_python/archive/a0fbf98d4e3a232144df4d0d80b577c7a693b570.zip",
+    strip_prefix = "rules_python-a0fbf98d4e3a232144df4d0d80b577c7a693b570",
 )
 
-load("@rules_python//python:pip.bzl", "pip_import", "pip_repositories")
+load("@rules_python//python:pip.bzl", "pip3_import", "pip_repositories")
 load("@rules_python//python:repositories.bzl", "py_repositories")
 pip_repositories()
 py_repositories()
 
 # Create a central repo that knows about the dependencies needed for
 # requirements.txt.
-pip_import(
+pip3_import(
     name = "pip_deps",
     requirements = "@web_compiler//:pip_requirements.txt",
 )
