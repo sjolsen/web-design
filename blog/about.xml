@@ -11,13 +11,12 @@
     <title>About me</title>
     <body>
       <html:p>
-        I'm a graduate of Texas State University and currently a senior software engineer at Google (any views expressed here are my own, etc. etc.).
+        I'm a graduate of Texas State University and formerly a senior software engineer at Google.
         My professional experience is primarily in firmware development and testing, hardware bring-up, system design, and custom software development infrastructure.
         I have varying levels of experience in several fields, some closely related to my professional work and some less so, including electrical engineering, computer architecture, programming language theory, category theory, control theory, operating systems, and FPGA development.
       </html:p>
       <html:p>
         Some of my old work is hosted on my GitHub page (<html:a href="https://github.com/sjolsen">https://github.com/sjolsen</html:a>).
-        Recently I've done some FPGA work in my spare time, also listed on GitHub.
       </html:p>
     </body>
   </section>
@@ -27,11 +26,7 @@
     <body>
       <html:p>
         I can be reached at <html:a
-        href="mailto:stuart@sj-olsen.com">stuart@sj-olsen.com</html:a>. I check
-        this inbox relatively infrequently, so it may be a while before I get
-        back to you. <html:b>No job solicitations, please</html:b>. Messages
-        relevant to my work at Google should be directed to my corporate e-mail
-        address.
+        href="mailto:stuart@sj-olsen.com">stuart@sj-olsen.com</html:a>.
       </html:p>
     </body>
   </section>
